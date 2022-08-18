@@ -1,5 +1,6 @@
 const express = require('express')
 const customer = require('./routes/customer')
+const item = require('./routes/item')
 
 const app = express()
 const port = 3000
@@ -7,6 +8,7 @@ const port = 3000
 app.use(express.json())
 
 app.use('/customer', customer)
+app.use('/item', item)
 
 app.get('/', (req, res) => {
   res.send('Request came from /route')
