@@ -1,6 +1,6 @@
 const express = require('express')
 const mysql = require('mysql')
-const dbase = require('../configs/db.js')
+const dbase = require('../configs/db')
 const router = express.Router()
 const connection = mysql.createConnection(dbase.database)
 
