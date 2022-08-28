@@ -69,9 +69,9 @@ router.put('/', (req, res) => {
 router.get('/:id', (req, res) => {
     const id = req.params.id;
 
-    var seacrhQuery = "SELECT * FROM customer WHERE id=?"
+    var searchQuery = "SELECT * FROM customer WHERE id=?"
 
-    connection.query(seacrhQuery, [id], (err, row) => {
+    connection.query(searchQuery, [id], (err, row) => {
         if (err) console.log(err);
         res.send(row);
     })
